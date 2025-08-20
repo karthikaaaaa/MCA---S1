@@ -1,286 +1,437 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  
     <title>Web Technology</title>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #007acc;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #007acc;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        img {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        <!-- table, th, td {
+            border: 1px solid #ccc;
+        } -->
+
+        td {
+            padding: 12px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        td a {
+            text-decoration: none;
+            color: #007acc;
+            font-weight: bold;
+        }
+
+        td a:hover {
+            color: #005fa3;
+        }
+
+        p {
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        a[href="#top"] {
+            display: block;
+            text-align: right;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #007acc;
+            font-weight: bold;
+        }
+
+        a[href="#top"]:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #007acc;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Web Technology</h1>
-    <img src="https://via.placeholder.com/1200x300" alt="Web Technology Banner" width="100%">
-
-    <h2 id="top">Table of Contents</h2>
-    <table border="1" cellpadding="10">
-        <tr>
-            <td><a href="#client-server">Client-Server</a></td>
-            <td><a href="#components">Components of Web Applications</a></td>
-            <td><a href="#types-content">Types of Web Content</a></td>
-        </tr>
-        <tr>
-            <td><a href="#http-request">HTTP - HTTP Request</a></td>
-            <td><a href="#dynamic-pages">Dynamic Web Pages</a></td>
-            <td><a href="#app-servers">Application Servers</a></td>
-        </tr>
-        <tr>
-            <td><a href="#web-security">Web Security</a></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-
-    <h2 id="client-server">Client-Server</h2>
-    <img src="https://via.placeholder.com/800x200" alt="Client-Server">
-    <p>Client and server role
-
-The server component provides a function or service to one or many clients, which initiate requests for such services. Servers are classified by the services they provide. For example, a web server serves web pages and a file server serves computer files. A shared resource may be any of the server computer's software and electronic components, from programs and data to processors and storage devices. The sharing of resources of a server constitutes a service.
-
-Whether a computer is a client, a server, or both, is determined by the nature of the application that requires the service functions. For example, a single computer can run a web server and file server software at the same time to serve different data to clients making different kinds of requests. The client software can also communicate with server software within the same computer.[2] Communication between servers, such as to synchronize data, is sometimes called inter-server or server-to-server communication.
-Client and server communication
-
-Generally, a service is an abstraction of computer resources and a client does not have to be concerned with how the server performs while fulfilling the request and delivering the response. The client only has to understand the response based on the relevant application protocol, i.e. the content and the formatting of the data for the requested service.
-
-Clients and servers exchange messages in a request–response messaging pattern. The client sends a request, and the server returns a response. This exchange of messages is an example of inter-process communication. To communicate, the computers must have a common language, and they must follow rules so that both the client and the server know what to expect. The language and rules of communication are defined in a communications protocol. All protocols operate in the application layer. The application layer protocol defines the basic patterns of the dialogue. To formalize the data exchange even further, the server may implement an application programming interface (API).[3] The API is an abstraction layer for accessing a service. By restricting communication to a specific content format, it facilitates parsing. By abstracting access, it facilitates cross-platform data exchange.[4]
-
-A server may receive requests from many distinct clients in a short period. A computer can only perform a limited number of tasks at any moment, and relies on a scheduling system to prioritize incoming requests from clients to accommodate them. To prevent abuse and maximize availability, the server software may limit the availability to clients. Denial of service attacks are designed to exploit a server's obligation to process requests by overloading it with excessive request rates. Encryption should be applied if sensitive information is to be communicated between the client and the server. .The client–server model is a distributed application structure that partitions tasks or workloads between the providers of a resource or service, called servers, and service requesters, called clients.[1] Often clients and servers communicate over a computer network on separate hardware, but both client and server may be on the same device. A server host runs one or more server programs, which share their resources with clients. A client usually does not share its computing resources, but it requests content or service from a server and may share its own content as part of the request. Clients, therefore, initiate communication sessions with servers, which await incoming requests. Examples of computer applications that use the client–server model are email, network printing, and the World Wide Web. .The client-server model is a network architecture where a client requests ̥services and the server provides them.</p>
-    <a href="#top">Back to Top</a>
-
-    <h2 id="components">Components of Web Applications</h2>
-    <img src="https://via.placeholder.com/800x200" alt="Web App Components">
-    <p>Web applications typically consist of front-end, back-end, and a database, working together to deliver functionality to users.The internet is all about browsing websites and attaining the desired response. The number of internet users in the present decade is the highest and the number is rapidly growing due to advancements in technology. For the users, the entire process is simple, but everything major happens behind the scenes. Every time a user sends a request, it goes to the server which processes the request to take all the necessary actions. Afterward, the response is sent to the browser to provide the result to the user. However, websites are different from web applications in several ways.
-
-Web applications have an in-depte productive while completing the process in the least time possible. The top companies using this web application architecture include Etsy, Netflix, Uber, and Twitter.:
-    Progressive Web Apps:
-    One of the best things about progressive web apps is that they are compatible with every device. Whether it is a desktop, a tablet, or a smartphone, these apps can adjust to any device with ease. Rather than the app store, these apps can be shared and found just through their URL.
-    Furthermore, there are several other perks of having these apps including a user-friendly experience, lightweight, ability to be added to the home screen, and offline working capability. Trivago, Pinterest, Starbucks, Telegram, and Treebo are the top companies with progressive web applications. Amazon Web Services, Google Cloud Platform, and Microsoft Azure are the top providers of serverless architectures in the industry.
-    Serverless Architecture:
-    The last on this list is the serverless architecture which is different from the traditional way of software functioning. In the traditional method, the execution of the code is stored and managed by the app developer or organization. On the other hand, in serverless architecture, there is no need to have physical servers as the entire execution of code is managed by cloud service providers. Here the web applications are created and deployed on the third-party cloud servers. One key feature of this architecture is that it eradicates the issues related to physical servers.
-    Function-as-a-Service and Backend-as-a-Service are two types of serverless architectures. The former emphasizes more on events where it breaks the app into small functions that focus on code whereas the latter is more about frontend development tasks.
-
-Working of a Web Application :
-
-Even though there are several types of web applications available, the basic web application component codes are common. There are two different types of codes used in a web application; client-side code and server-side code.
-
-    Client-Side Code:
-    Also known as frontend, the client-side code is mainly written in JavaScript, CSS, and HTML. These codes are stored in the browser as well. In other words, this code is responsible for user interaction of the site.
-    Server-Side Code:
-    SSC or server-side code functions on the backend where they are responsible for controlling the entire business login. Furthermore, this code will respond to every HTTP request received from the user. The programming languages used in writing server-side code are Ruby, Java, and Python, among others.
-
-Web Application Process:
+    <header>
+        <h1 style="color: white;">Web Technology</h1>
+        <img src="./Assests/Web Technology.png.jpg" alt="Web Technology Banner">
+    </header>
 
-    The first thing a user does is input their request to the web server by using a web application or a browser.
-    This request is forwarded by the webserver to the most suitable web application server.
-    Afterwards, the web application server completes the task requested by the user and produces the right results.
-    Once completed, the earlier generated results are sent to the user along with the demanded information to the webserver from the application server. The web server responds to the user's request and displays the information to the user.
+    <div class="container">
+        <h2 id="top">Table of Contents</h2>
+        <table>
+            <tr>
+                <td><a href="#client-server">Client-Server</a></td>
+                <td><a href="#components">Components of Web Applications</a></td>
+                <td><a href="#types-content">Types of Web Content</a></td>
+            </tr>
+            <tr>
+                <td><a href="#http-request">HTTP Request</a></td>
+                <td><a href="#dynamic-pages">Dynamic Web Pages</a></td>
+                <td><a href="#app-servers">Application Servers</a></td>
+            </tr>
+            <tr>
+                <td><a href="#web-security">Web Security</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
 
-Web Application Trends:
+        <h2 id="client-server">Client-Server</h2>
+        <img src="./Assests/client-server.png" alt="Client-Server">
+        <p>Client-Server Architecture
 
-Web applications trends are changing every year and a developer should be aware of such trends so that they can keep up with the industry leaders. These trends allow the developer to create a web app that the users want, making their created web app more usable and generating better traffic. Below are the web application trends that every developer should know.
+Definition:
+Client-server is a network architecture where clients (users or devices) request services or resources, and servers provide those services or resources.
 
-    Progressive Web Applications:
-    Progressive web apps or PWAs have been widely used in web app development for a very long time, but it is not going anywhere soon. Even though it runs on the browser, it provides users with the native mobile app experience. With a great conversion rate, user engagement, and less maintenance cost, one thing is sure progressive web applications will be a lasting trend in the industry.
-    AI Chabot:
-    AI Chatbots are based on quick learning AI that acts as a human to solve common queries of the users. They understand the user behavior and respond accordingly. The best thing about this is that these bots can function 24X7 without any human intervention, making it a potential web app trend.
-    Blockchain:
-    Blockchain is considered among the safest technologies in the present time as the contracts running on these networks cannot be changed. Moreover, its peer-to-peer architecture provides a ledger with high decentralization and transparency. Data can be transferred on different networks without the need for any mediators and it is stored in a public or private network. Using open-source systems is also possible as it can minimize potential cyber threats.
-    Virtual Reality:
-    Virtual reality has gained immense traction in the last few years due to the increasing number of technology and internet users. It is speculated that the number of VR users in 2024 will be record-breaking. As the trend of remote working is on the rise, VR is sure to become one of the biggest trends in web app development.
-    Serverless Architecture:
-    In the present time, organizations want to handle the least amount of tasks possible. As web applications need physical servers to run, serverless architecture is becoming highly popular. It eradicates the use and maintenance of such servers by the organization. However, every server is managed by third parties which ultimately reduces the development costs and enhances data security.
-    Single-Page Applications:
-    SPAs are one of the recent trends in web applications. Based on JavaScript, this architecture loads an HTML page in the browser and updates the page content whenever required. The reason why this is going to become trendy in 2024 is that it updates the page content with relevant information without refreshing it, making it faster and more effective. Moreover, they consume less space on servers and are proven to be highly cost-effective.
+Key Components:
 
-Top Web Application Frameworks:
+Client:
 
-Every web app should be created effectively and by keeping its users in mind so that it could be successful in the long run. Web application frameworks do the same by helping the developers in understanding and meeting the user's demands and creating the app effectively. Not just the architecture, but the right web framework plays a crucial role in development as well. Below mentioned are the top web application frameworks that you should know about.
+Requests data or services.
 
-    Django.
-    Play.
-    Angular.
-    Laravel.
-    Express.
-    ASP.NET.
-    Ruby on Rails.
-    METEOR.
-    Spring.
-    CodeIgniter.
+Typically a web browser, mobile app, or software.
 
-Best Practices for Web Application Infrastructure:
+Does not share its resources but initiates communication.
 
-To get the appropriate outcome from web app architecture, it is essential to use the best practices. These practices ensure that the created architecture is the right for the application. Let's dig deeper into these practices which will help you in your web application architecture.
+Server:
 
-    Know the Goals:
-    Before you begin working on the web app architecture, the first thing that you should be clear about should be your goals. Communicate with your team members regarding these goals and create a blueprint of the architecture that will help you in achieving the goals. These goals could be the timeline of the web app or the features that you want to include in it.
-    Understand your Limitations:
-    Even the experts will have certain limitations while working on technology including web app architecture. Due to this reason, it is not always possible to attain successful results when the limitations are not measured. Considering that fact, you should always be aware of your technical limitations and tackle them accordingly so that you could set expectations that you can achieve within the given resources.
-    Fix the Problems as they Arise:
-    Many developers make the mistake of waiting for the web app to release before they can fix the issues. Not only does it become complex to fix the errors, but can hamper the reputation of the app as well. The best practice is to fix the issues as soon as they arise so that it does not hinder the app's performance.
-    Be Unique:
-    Without a doubt, there are tons of successful web application architectures. Sometimes developers shortlist some successful apps' architecture, replicate the same and add certain customizations for their app architecture. However, they forget a crucial factor that an architecture that has been successful for another web application doesn\'t need to be suitable for their app as well. Due to this reason, their app may never become successful. The right practice is to create an architecture based on your business logic and goals.
+Responds to client requests.
 
-How ThinkSys Inc Help Your Web Application Grow?
+Provides services such as web pages, files, databases, or applications.
 
-Web application architecture is directly related to the success of the web app. Using the right practices combined with following the right trends is the key to staying ahead of the competition. ThinkSys Inc has a team of professional and qualified web application architects who will analyze your requirements, the challenges, and the limitations that might come in the way.
+Can handle multiple client requests simultaneously.
 
-With the proper study of your web application requirements, our professionals will determine the crucial parameters on which the right architecture will be decided. Furthermore, the business needs of your web app along with your technical needs will be examined to give you the right web application that aligns with your business. If you want to dig deeper into our service then,
-Feel free to connect with our professionals who will guide you with the entire process.
+How It Works:
 
-Share This Article:
-arrowPrevious Post
-postthumbnail
+Client sends a request to the server (e.g., a user opens a website).
 
-How to Conduct Manual Testing: Best Practices Guide
-Next Postarrow
-postthumbnail
+Server processes the request.
 
-ThinkSys Mediapipe Flutter Plugin: Everything Explained
-Comments:
-Log In
-Guest
+Server sends back the appropriate response (e.g., HTML page).
 
-Email me new posts
+Client receives and displays the data.
 
-Save my name, email, and website in this browser for the next time I comment.
+Examples:
 
-Email me new comments
-Related Stories
+Web: Browser (client) ↔ Web server
 
-    related blog image
-    Development·May 
-    Play
+Email: Email app (client) ↔ Mail server
 
-    Privacy Policy
-    Terms and Conditions</p>
-    <a href="#top">Back to Top</a>
+Database: Application (client) ↔ Database server
 
-    <h2 id="types-content">Types of Web Content</h2>
-    <img src="https://via.placeholder.com/800x200" alt="Types of Web Content">
-    <p>Web content includes text, images, videos, and dynamic elements like forms and interactive components.What Are The Types of Web Content?
+Advantages:
 
-Written by Nick Stamoulis
+Centralized control and data storage.
 
-This article was published on July 7, 2015
+Easier maintenance and security.
 
-Categorized in: Content
+Scalable with proper configuration.
 
-Web content is defined as any writing and all associated digital media, such as text, audio, video, and images published on the internet. Web content is created using many differen
-Images are becoming more and more popular on the internet, where the following type of content comes in. Images accompany the text and provide visual context for readers when reading text that doesn’t include images. One can also upload images in their own right instead of being added through a short text post. Images are a prominent feature on the web and are created through photographs, graphics, vector art, or video. Images are widely used for branding.
-Video Content
+Disadvantages:
 
-Video is another type of content that makes it onto sites’ homepage pages because it’s an effective way to attract attention. Videos can make your site more appealing through emotional appeal and visual appeal. It can be both fun and informative, or severe and educational.
+Server downtime can impact all clients.
 
-Video is an effective way to attract attention because it’s a continuous series of images, sounds, or video clips represented visually as moving images in the form of communication. Using video on your site will make your site more appealing because it represents information clearly through a visual medium.
-Multimedia Content
+Can become expensive with high traffic.
 
-Multimedia content is considered any online media that includes more than one type of media. The most common forms of multimedia content include audio and video. Audio is music or sound used to show emotion or give spatial depth in a piece of writing. Sounds and music can accompany the images to create a practical effect when delivering a message in the video.
-Interactive Content
+Performance depends on server capacity.</p>
+        <a href="#top">Back to Top</a>
 
-Interactive content works precisely like a traditional website, except that it includes elements that use computer-based input devices such as computers, game boards, buttons, keyboards, and start-up firms. The user can interact with the content through these devices. Interactive content allows users to experience and play with the content more entertainingly. This type of content appeals to people with an analytical mind and those interested in finding solutions to problems.</p>
-    <a href="#top">Back to Top</a>
+        <h2 id="components">Components of Web Applications</h2>
+        <img src="./Assests/Web App Components.png" alt="Web App Components">
+        <p>🧑‍💻 1. Frontend (Client-Side)
 
-    <h2 id="http-request">HTTP - HTTP Request</h2>
-    <img src="https://via.placeholder.com/800x200" alt="HTTP Request">
-    <p>HTTP (HyperText Transfer Protocol) is the foundation of data communication on the web. It uses methods like GET and POST to request data.Background:
+Definition: The part of the application that users interact with directly — runs in the browser.
 
-This page is generated by a web of HTML, CSS, and Javascript, sent to you by Codecademy via the internet. The internet is made up of a bunch of resources hosted on different servers. The term “resource” corresponds to any entity on the web, including HTML files, stylesheets, images, videos, and scripts. To access content on the internet, your browser must ask these servers for the resources it wants and then display these resources to you. This protocol of requests and responses enables you to view this page in your browser.
+Key Technologies:
 
-This article focuses on one fundamental part of how the internet functions: HTTP.
-What is HTTP?
+HTML – Structure
 
-HTTP stands for Hypertext Transfer Protocol and is used to structure requests and responses over the internet. HTTP requires data to be transferred from one point to another over the network.
+CSS – Styling
 
-The transfer of resources happens using TCP (Transmission Control Protocol). In viewing this webpage, TCP manages the channels between your browser and the server (in this case, codecademy.com). TCP is used to manage many types of internet connections in which one computer or device wants to send something to another. HTTP is the command language that the devices on both sides of the connection must follow in order to communicate.
-HTTP & TCP: How it Works
+JavaScript – Interactivity
 
-When you type an address such as www.codecademy.com into your browser, you are commanding it to open a TCP channel to the server that responds to that URL (or Uniform Resource Locator, which you can read more about on Wikipedia). A URL is like your home address or phone number because it describes how to reach you.
+Frontend frameworks – React, Angular, Vue.js
 
-In this situation, your computer, which is making the request, is called the client. The URL you are requesting is the address that belongs to the server. Once the TCP connection is established, the client sends a HTTP GET request to the server to retrieve the webpage it should display. After the server has sent the response, it closes the TCP connection. If you open the website in your browser again, or if your browser automatically requests something from the server, a new connection is opened which follows the same process described above. GET requests are one kind of HTTP method a client can call. You can learn more about the other common ones (POST, PUT and DELETE) in this article.
+Responsibilities:
 
-Let’s explore an example of how GET requests (the most common type of request) are used to help your computer (the client) access resources on the web.
+User interface (UI)
 
-Suppose you want to check out the latest course offerings from http://codecademy.com. After you type the URL into your browser, your browser will extract the http part and recognize that it is the name of the network protocol to use. Then, it takes the domain name from the URL, in this case “codecademy.com”, and asks the internet Domain Name Server to return an Internet Protocol (IP) address.
+Handling user input
 
-Now the client knows the destination’s IP address. It then opens a connection to the server at that address, using the http protocol as specified. It will initiate a GET request to the server which contains the IP address of the host and optionally a data payload. The GET request contains the following text:
+Displaying data from the backend
 
-GET / HTTP/1.1
-Host: www.codecademy.com
+🖥️ 2. Backend (Server-Side)
 
-This identifies the type of request, the path on www.codecademy.com (in this case, “/“) and the protocol “HTTP/1.1.” HTTP/1.1 is a revision of the first HTTP, which is now called HTTP/1.0. In HTTP/1.0, every resource request requires a separate connection to the server. HTTP/1.1 uses one connection more than once, so that additional content (like images or stylesheets) is retrieved even after the page has been retrieved. As a result, requests using HTTP/1.1 have less delay than those using HTTP/1.0.
+Definition: Handles business logic, database interactions, and client requests.
 
-The second line of the request contains the address of the server which is "www.codecademy.com". There may be additional lines as well depending on what data your browser chooses to send.
+Key Technologies:
 
-If the server is able to locate the path requested, the server might respond with the header:
+Languages: Node.js, Python, Java, PHP, Ruby
 
-HTTP/1.1 200 OK
-Content-Type: text/html
-</p>
-    <a href="#top">Back to Top</a>
+Frameworks: Express.js, Django, Spring, Laravel
 
-    <h2 id="dynamic-pages">Dynamic Web Pages</h2>
-    <img src="https://via.placeholder.com/800x200" alt="Dynamic Pages">
-    <p>Dynamic web pages are generated in real-time based on user input or database queries, unlike static pages.Progressive Web Applications:
-    Progressive web apps or PWAs have been widely used in web app development for a very long time, but it is not going anywhere soon. Even though it runs on the browser, it provides users with the native mobile app experience. With a great conversion rate, user engagement, and less maintenance cost, one thing is sure progressive web applications will be a lasting trend in the industry.
-    AI Chabot:
-    AI Chatbots are based on quick learning AI that acts as a human to solve common queries of the users. They understand the user behavior and respond accordingly. The best thing about this is that these bots can function 24X7 without any human intervention, making it a potential web app trend.
-    Blockchain:
-    Blockchain is considered among the safest technologies in the present time as the contracts running on these networks cannot be changed. Moreover, its peer-to-peer architecture provides a ledger with high decentralization and transparency. Data can be transferred on different networks without the need for any mediators and it is stored in a public or private network. Using open-source systems is also possible as it can minimize potential cyber threats.
-    Virtual Reality:
-    Virtual reality has gained immense traction in the last few years due to the increasing number of technology and internet users. It is speculated that the number of VR users in 2024 will be record-breaking. As the trend of remote working is on the rise, VR is sure to become one of the biggest trends in web app development.
-    Serverless Architecture:
-    In the present time, organizations want to handle the least amount of tasks possible. As web applications need physical servers to run, serverless architecture is becoming highly popular. It eradicates the use and maintenance of such servers by the organization. However, every server is managed by third parties which ultimately reduces the development costs and enhances data security.
-    Single-Page Applications:
-    SPAs are one of the recent trends in web applications. Based on JavaScript, this architecture loads an HTML page in the browser and updates the page content whenever required. The reason why this is going to become trendy in 2024 is that it updates the page content with relevant information without refreshing it, making it faster and more effective. Moreover, they consume less space on servers and are proven to be highly cost-effective.
-</p>
-    <a href="#top">Back to Top</a>
+Responsibilities:
 
-    <h2 id="app-servers">Application Servers</h2>
-    <img src="https://via.placeholder.com/800x200" alt="Application Servers">
-    <p>Application servers run web applications and handle business logic, connecting the user interface with databases and services.</p>A dynamic web page is a web page constructed at runtime (during software execution), as opposed to a static web page, delivered as it is stored.
+Process requests from the frontend
 
-A server-side dynamic web page is a web page whose construction is controlled by an application server processing server-side scripts.[1] In server-side scripting, parameters determine how the assembly of every new web page proceeds, and including the setting up of more client-side processing.
+Communicate with the database
 
-A client-side dynamic web page processes the web page using JavaScript running in the browser as it loads. JavaScript can interact with the page via Document Object Model (DOM), to query page state and modify it. Even though a web page can be dynamic on the client-side, it can still be hosted on a static hosting service such as GitHub Pages or Amazon S3 as long as there is not any server-side code included.
+Apply business logic
 
-A dynamic web page is then reloaded by the user or by a computer program to change some variable content. The updating information could come from the server, or from changes made to that page's DOM. This may or may not truncate the browsing history or create a saved version to go back to, but a dynamic web page update using AJAX technologies will neither create a page to go back to, nor truncate the web browsing history forward of the displayed page. Using AJAX, the end user gets one dynamic page managed as a single page in the web browser while the actual web content rendered on that page can vary. The AJAX engine sits only on the browser requesting parts of its DOM, the DOM, for its client, from an application server. A particular application server could offer a standardized REST style interface to offer services to the web application.[2]
+Return responses (usually in JSON format)
 
-DHTML is the umbrella term for technologies and methods used to create web pages that are not static web pages, though it has fallen out of common use since the popularization of AJAX, a term which is now itself rarely used. Client-side-scripting, server-side scripting, or a combination of these make for the dynamic web experience in a browser.
-Basic concepts
+🗃️ 3. Database
 
-Classical hypertext navigation, with HTML or XHTML alone, provides "static" content, meaning that the user requests a web page and simply views the page and the information on that page.
+Definition: Stores and manages data used by the web application.
 
-However, a web page can also provide a "live", "dynamic", or "interactive" user experience. Content (text, images, form fields, etc.) on a web page can change, in response to different contexts or conditions.
+Types:
 
-There are two ways to create this kind of effect:
+Relational Databases (SQL): MySQL, PostgreSQL, Oracle
 
-    Using client-side scripting to change interface behaviors within a specific web page, in response to mouse or keyboard actions, data received from a web API, websocket or at specified timing events. In this case the dynamic behavior occurs within the presentation.
-    Using server-side scripting to change the supplied page source code between pages, adjusting the sequence or reload of the web pages or web content supplied to the browser. Server responses may be determined by such conditions as data in a posted HTML form, parameters in the URL, the type of browser being used, the passage of time, or a database or server state.[3]
+Non-relational Databases (NoSQL): MongoDB, Firebase
 
-Web pages that use client-side scripting must use presentation technology broadly called rich interfaced pages. Client-side scripting languages like JavaScript or ActionScript, used for Dynamic HTML (DHTML) and Flash technologies respectively, are frequently used to orchestrate media types (sound, animations, changing text, etc.) of the presentation. The scripting also allows use of remote scripting, a technique by which the DHTML page requests additional information from a server, using a hidden Frame, XMLHttpRequests, or a web service. It is also possible to use a web framework to create a web API, which the client, via the use of JavaScript, uses to obtain data and alter its appearance or behavior dynamically depending on the data.
+Responsibilities:
 
-Web pages that use server-side scripting are often created with the help of server-side languages such as PHP, Perl, ASP, JSP, ColdFusion and other languages. These server-side languages typically use the Common Gateway Interface (CGI) to produce dynamic web pages. These kinds of pages can also use, on the client-side, the first kind (DHTML, etc.). 
-    <a href="#top">Back to Top</a>
+Store user data, app data, logs, etc.
 
-    <h2 id="web-security">Web Security</h2>
-    <img src="https://via.placeholder.com/800x200" alt="Web Security">
-    <p>Web security includes measures to protect websites from threats like SQL injection, XSS, and CSRF.Internet security is a branch of computer security. It encompasses the Internet, browser security, web site security,[1] and network security as it applies to other applications or operating systems as a whole. Its objective is to establish rules and measures to use against attacks over the Internet.[2] The Internet is an inherently insecure channel for information exchange, with high risk of intrusion or fraud, such as phishing,[3] online viruses, trojans, ransomware and worms.
+Handle queries (read/write/update/delete)
 
-Many methods are used to combat these threats, including encryption and ground-up engineering.[4]
-Threats
-Emerging Threats
+Ensure data consistency and security
 
-Emerging cyberthreats are a result of recent technological breakthroughs. For example, deepfakes use AI to produce audio and video that seems real but are actually fake, which increases the danger of fraud and false information. Furthermore, traditional risks can be automated and strengthened by AI-driven attacks, making them harder to identify and neutralize.
-Malicious software
+☁️ 4. Web Server
 
-Malicious software comes in many forms, such as viruses, Trojan horses, spyware, and worms.
+Definition: A server that handles HTTP requests and serves the frontend content.
 
-    Malware, a portmanteau of malicious software, is any software used to disrupt computer operation, gather sensitive information, or gain access to private computer systems. Malware is defined by its malicious intent, acting against the requirements of the computer user, and does not include software that unintentionally causes harm due to some deficiency. The term badware applies to both malware and unintentionally harmful software.
-    A botnet is a network of computers that have been taken over by a robot or bot that performs large-scale malicious acts for its creator.
-    Computer viruses are programs that can replicate their structures or effects by infecting other files or structures on a computer. The typical purpose of a virus is to take over a computer to steal data.
-    Computer worms are programs that can replicate themselves throughout a computer network.
-    Ransomware is a type of malware that restricts access to the computer system that it infects, and demands a ransom in order for the restriction to be removed.
-    Scareware is a program of usually limited or no benefit, containing malicious payloads, that is sold via unethical marketing practices. The selling approach uses social engineering to cause shock, anxiety, or the perception of a threat, generally directed at an unsuspecting user.
-    Spyware refers to programs that surreptitiously monitor activity on a computer system and report that information to others without the user's consent.
-    One particular kind of spyware is key logging malware. Often referred to as keylogging or keyboard capturing, is the action of recording (logging) the keys struck on a keyboard.
-    A Trojan horse, commonly known as a Trojan, is a general term for malware that pretends to be harmless, so that a user will be convinced to download it onto the computer.</p>
-    <a href="#top">Back to Top</a>
+Examples:
 
+Apache
+
+Nginx
+
+Node.js (can act as a web server too)
+
+Responsibilities:
+
+Serve static files (HTML, CSS, JS)
+
+Forward API calls to backend services
+
+Handle security (HTTPS, SSL)
+
+🌐 5. Application Server
+
+Definition: Hosts the backend application logic and communicates with the web server and database.
+
+Responsibilities:
+
+Execute backend code
+
+Handle sessions, authentication, and authorization
+
+Perform complex calculations</p>
+        <a href="#top">Back to Top</a>
+
+        <h2 id="types-content">Types of Web Content</h2>
+        <img src="./Assests/Types of Web Content.png" alt="Types of Web Content">
+        <p>🌐 Types of Web Content
+1. Text Content
+
+Articles / Blog posts: Informative or opinion-based writings.
+
+News: Up-to-date information and reports.
+
+FAQs: Frequently asked questions to help users.
+
+E-books / Whitepapers: In-depth downloadable content.
+
+Product Descriptions: Details about products or services.
+
+2. Images
+
+Photographs
+
+Illustrations
+
+Infographics
+
+Logos and icons
+
+3. Videos
+
+Tutorials and demonstrations
+
+Promotional videos
+
+Webinars
+
+Live streams
+
+4. Audio
+
+Podcasts
+
+Music
+
+Voice recordings or messages
+
+Sound effects
+
+5. Interactive Content
+
+Quizzes and polls
+
+Forms and surveys
+
+Calculators
+
+Games
+
+Chatbots</p>
+        <a href="#top">Back to Top</a>
+
+        <h2 id="http-request">HTTP Request</h2>
+        <img src="./Assests/HTTP Request.png" alt="HTTP Request">
+        <p>🔍 HTTP Request
+What is it?
+
+An HTTP Request is a message sent by a client (usually a web browser) to a server to ask for data or perform an action on a web resource.
+
+Key Parts of an HTTP Request:
+
+Request Line
+
+Method (or Verb) — What action the client wants (e.g., GET, POST)
+
+URL (Uniform Resource Locator) — The resource the client wants
+
+HTTP Version — The version of HTTP being used (e.g., HTTP/1.1)
+
+Example:</p>
+        <a href="#top">Back to Top</a>
+
+        <h2 id="dynamic-pages">Dynamic Web Pages</h2>
+        <img src="./Assests/Dynamic Pages.png" alt="Dynamic Pages">
+        <p>🌐 Dynamic Web Pages
+What Are Dynamic Web Pages?
+
+Dynamic web pages are web pages that change content dynamically, based on user interaction, data, or other real-time factors, rather than showing the same fixed content every time.
+
+Unlike static web pages, which show the same HTML content every time, dynamic pages can display different information for different users or update automatically.
+
+How Dynamic Web Pages Work
+
+Client requests a page
+
+Server processes logic (using programming languages like PHP, Python, Node.js)
+
+Server generates HTML content on the fly based on input, database data, or other factors
+
+Server sends the customized HTML back to the client
+
+Client browser renders the page
+
+Technologies Behind Dynamic Web Pages
+
+Server-side languages: PHP, Python (Django/Flask), Ruby (Rails), Java (Spring), Node.js
+
+Databases: MySQL, PostgreSQL, MongoDB to store and retrieve data
+
+Client-side scripting: JavaScript for interactive changes without page reload (AJAX, React, Vue)
+
+Templating engines: Tools that help generate HTML dynamically (e.g., EJS, Jinja2)</p>
+        <a href="#top">Back to Top</a>
+
+        <h2 id="app-servers">Application Servers</h2>
+        <img src="./Assests/Application Servers,png.webp" alt="Application Servers">
+        <p>🖥️ Application Servers
+What is an Application Server?
+
+An Application Server is a software framework that provides an environment to run and manage business logic and application services for web applications. It acts as a middle layer between the web server (which handles HTTP requests) and the database.
+
+Key Functions of an Application Server:
+
+Execute business logic: Runs the core code that powers the app’s features (e.g., processing orders, calculations, validations).
+
+Manage application resources: Handles tasks like transaction management, connection pooling, and security.
+
+Handle client requests: Receives requests from web servers or clients, processes them, and returns results.
+
+Middleware services: Supports messaging, authentication, and API integration.
+
+Session management: Tracks user sessions across multiple requests.</p>
+        <a href="#top">Back to Top</a>
+
+        <h2 id="web-security">Web Security</h2>
+        <img src="./Assests/Web Security.png" alt="Web Security">
+        <p>🔒 Web Security
+What is Web Security?
+
+Web Security involves protecting websites, web applications, and online services from cyber threats such as unauthorized access, data breaches, attacks, and other vulnerabilities.
+
+Common Web Security Threats:
+
+Cross-Site Scripting (XSS): Attackers inject malicious scripts into webpages viewed by other users.
+
+SQL Injection: Malicious SQL commands are inserted into input fields to manipulate databases.
+
+Cross-Site Request Forgery (CSRF): Unauthorized commands are transmitted from a user that the website trusts.
+
+Man-in-the-Middle (MITM) Attacks: Intercepting and altering communication between client and server.
+
+Denial of Service (DoS): Overloading a server to make a service unavailable.
+
+Brute Force Attacks: Trying multiple passwords or keys to gain unauthorized access.</p>
+        <a href="#top">Back to Top</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Web Technology</p>
+    </footer>
 </body>
 </html>
