@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table in HTML</title>
+    <style>
+        table {
+            <!-- border-collapse: collapse; -->
+            width: 70%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Employee Directory</h2>
+
+<table style="border-collapse: collapse;">
+    <tr>
+        <th rowspan="2">ID</th>
+        <th rowspan="2">Name</th>
+        <th rowspan="2">Position</th>
+        <th rowspan="2">Department</th>
+        <th colspan="2">Phone Number</th>
+    </tr>
+    <tr>
+        <th>Mobile</th>
+        <th>Office</th>
+    </tr>
+    <tr>
+        <td>001</td>
+        <td>Abhijith</td>
+        <td>Software Engineer</td>
+        <td>IT</td>
+        <td>98753210</td>
+        <td>044653435</td>
+    </tr>
+    <tr>
+        <td>002</td>
+        <td>Karthika</td>
+        <td>Project Manager</td>
+        <td>Operations</td>
+        <td>876672109</td>
+        <td>0772345678</td>
+    </tr>
+    <tr>
+        <td>003</td>
+        <td>Aarjav</td>
+        <td>Data Analyst</td>
+        <td>Marketing</td>
+        <td>7655671098</td>
+        <td>06763456789</td>
+    </tr>
+</table>
+
+</body>
+</html>
