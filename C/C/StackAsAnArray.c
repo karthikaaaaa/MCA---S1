@@ -18,8 +18,10 @@ void push(int value) {
         printf("Stack Overflow! Cannot push %d\n", value);
         return;
     }
+    
     stack[++top] = value;
     printf("Pushed %d\n", value);
+    
 }
 
 int pop() {
@@ -29,11 +31,18 @@ int pop() {
     }
     return stack[top--];
 }
+void displayArray(){
+    for(int i = top; i < sizeof(stack) / sizeof(stack[0]); i--){
+        printf("%d\t",stack[i]);
+
+    }
+}
 
 
 
 int main() {
     int option;
+    while(1){
     printf("Choose an option\n1.Insert\t2.Delete\n");
     scanf("%d", &option);
     if(option == 1){
@@ -41,13 +50,22 @@ int main() {
         printf("Enter the value to insert\n");
         scanf("%d",&num);
         push(num);
+        displayArray();
+     printf("\n");
+
     } else if(option == 2){
        pop();
+               displayArray();
+        printf("\n");
+
+
     } else {
-                printf("Invalid Option!\n");
+        printf("Invalid Option!\n");
+        break;
+
 
     }
    
-
+    }
     return 0;
 }
