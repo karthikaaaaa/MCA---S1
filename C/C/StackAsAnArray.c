@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define MAX 100
+#define MAX 10
 
 int stack[MAX];  
 int top = -1;   
@@ -30,15 +30,23 @@ int pop() {
     return stack[top--];
 }
 
-int peek() {
-    if (isEmpty()) {
-        printf("Stack is empty\n");
-        return -1;  
-    }
-    return stack[top];
-}
+
 
 int main() {
+    int option;
+    printf("Choose an option\n1.Insert\t2.Delete\n");
+    scanf("%d", &option);
+    if(option == 1){
+        int num;
+        printf("Enter the value to insert\n");
+        scanf("%d",&num);
+        push(num);
+    } else if(option == 2){
+       pop();
+    } else {
+                printf("Invalid Option!\n");
+
+    }
    
 
     return 0;
