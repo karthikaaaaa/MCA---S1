@@ -8,7 +8,7 @@ struct node {
 
 struct node* head= NULL;
 
-void insertionAtFront(int value)
+void InsertionAtFront(int value)
 {
     struct node* newnode=(struct node*) malloc(sizeof(struct node));
     newnode->data=value;
@@ -16,7 +16,7 @@ void insertionAtFront(int value)
     head=newnode; 
 }
 
-void insertionAtRear(int value)
+void InsertionAtRear(int value)
 {
     struct node* newnode=(struct node*) malloc(sizeof(struct node));
     newnode->data=value;
@@ -36,6 +36,43 @@ void insertionAtRear(int value)
     temp->next=newnode;}
 }
 
+void InsertionAtPosition(int value,int pos)
+{
+    struct node* newnode=(struct node*) malloc(sizeof(struct node));
+    newnode->data=value;
+    newnode->next=NULL;
+
+    if(pos<1)
+    {
+        printf("Invalid position");
+        free(newnode);
+        return;    
+    }
+
+    if(pos==1)
+    {
+        newnode->next=head;
+        head=newnode;
+        return;
+    }
+
+    struct node* temp=head;
+    for(int i=1;i<pos-1 && temp!=NULL;i++)
+    {
+        temp=temp->next;
+    }
+
+    if(temp==NULL)
+    {
+        printf("Invalid position");
+        free(newnode);
+        return;
+    }
+
+    newnode->next=temp->next;
+    temp->next=newnode;
+}
+
 void display()
 {
     struct node* temp=head;
@@ -50,7 +87,7 @@ int main()
 {
     int option;
     while(1){
-    printf("\nDo you want to enter at the 1.front or 2.rear? ");
+    printf("\nDo you want to enter at the 1.front or 2.rear or 3.At a position? ");
     scanf("%d",&option);
     if(option==1)
     {
@@ -62,7 +99,7 @@ int main()
         for(i=0;i<num;i++)
         {
           scanf("%d",&val);
-          insertionAtFront(val);
+          InsertionAtFront(val);
         }
     }
 
@@ -76,8 +113,19 @@ int main()
         for(i=0;i<num;i++)
         {
           scanf("%d",&val);
-          insertionAtRear(val);
+          InsertionAtRear(val);
         }
+    }
+
+    if(option==3)
+    {
+        int position,val;
+        printf("Enter the position where you wanna enter the element? ");
+        scanf("%d",&position);
+
+        printf("Enter element to be inserted: ");
+        scanf("%d",&val);
+        InsertionAtPosition(val, position);
     }
 
     printf("The elements of the list are: ");
