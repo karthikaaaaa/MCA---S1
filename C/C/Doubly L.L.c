@@ -55,5 +55,6 @@ void InsertionAtRear(int value)
 
 int main()
 {
-
+    return 0;
+   
 }
