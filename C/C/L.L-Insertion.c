@@ -57,7 +57,7 @@ void InsertionAtPosition(int value,int pos)
     }
 
     struct node* temp=head;
-    for(int i=1;i<pos-1 && temp!=NULL;i++)
+    for(int i=1;i<pos-1 && temp!=NULL;i++)          //temp != NULL------------To avoid crashing on short list
     {
         temp=temp->next;
     }
