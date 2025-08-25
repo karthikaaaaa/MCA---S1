@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Inside Table</title>
+    <style>
+    body {
+        background-color: #f0f8ff; /* Light background for contrast */
+        font-family: Arial, sans-serif;
+    }
+
+    table {
+
+        border-collapse: collapse;
+        width: 60%;
+        margin: 30px auto;
+        background-color: #e0f7fa; /* Soft blue */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    }
+
+    td {
+        padding: 12px 15px;
+        border: 1px solid #b2ebf2;
+        vertical-align: middle;
+    }
+
+    th {
+        background-color: #4dd0e1;
+        color: white;
+        padding: 12px 15px;
+        border: 1px solid #4dd0e1;
+        text-align: center;
+    }
+    .innertable{
+
+        border: none;
+        border-radius: 20px;
+    }
+        
+    </style>
+</head>
+<body>
+    <marquee direction = "right" scrollamount = "15" onmouseover="this.stop()" onmouseout="this.start()" ><h1>Welcome To Freshers World!!</h1></marquee>
+    <h1 align = "center">Registration Form</h1>
+
+<form action="#" method="post" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td><label for="name">Name:</label></td>
+            <td><input type="text" id="name" name="name" required></td>
+        </tr>
+        <tr>
+            <td><label for="age">Age:</label></td>
+            <td>
+                <select id="age" name="age" required>
+                    <option value="">--Select Age--</option>
+                    <option value="18-25">18-25</option>
+                    <option value="26-35">26-35</option>
+                    <option value="36-45">36-45</option>
+                    <option value="46+">46+</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="password">Password:</label></td>
+            <td><input type="password" id="password" name="password" required></td>
+        </tr>
+        <tr>
+            <td><label for="repassword">Re-enter Password:</label></td>
+            <td><input type="password" id="repassword" name="repassword" required></td>
+        </tr>
+        <tr>
+            <td><label for="security-question">Security Question:</label></td>
+
+
+
+            <td>
+                <input type="radio"  name="security-question">
+                <label >What is your pet's name?</label><br>
+                <input type="radio"  name="security-question">
+                <label >What is the name of your best friend ?</label><br>
+                <input type="radio"  name="security-question">
+                <label >What is your favourite colour?</label><br>
+                <input type="radio"  name="security-question">
+                <label >Who is your favourite teacher?</label>
+            </td>
+
+           
+
+
+
+
+
+        </tr>
+        <tr>
+            <td><label for="security-answer">Answer:</label></td>
+            <td><input type="text" id="security-answer" name="security_answer" required></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email ID:</label></td>
+            <td><input type="email" id="email" name="email" required></td>
+        </tr>
+        <tr>
+            <td>Languages Known:</td>
+            <td>
+                <input type="checkbox" id="english" name="languages" value="English">
+                <label for="english">English</label>
+                <input type="checkbox" id="hindi" name="languages" value="Hindi">
+                <label for="hindi">Hindi</label>
+                <input type="checkbox" id="spanish" name="languages" value="Spanish">
+                <label for="spanish">Malayalam</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Phone Number:</td>
+            <td>
+             <table class = "innertable">
+                <tr>
+                        <th>Home</th>
+                <th>Office</th>
+                </tr>
+                
+                <tr align = "center">
+                     <td ><input type="text"></td>
+                     <td ><input type="text"></td>
+                </tr>
+                
+            </table>
+            </td>
+            
+
+
+        </tr>
+        <tr>
+            <td><label for="file">Upload CV:</label></td>
+            <td><input type="file" id="file" name="file"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center;">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
