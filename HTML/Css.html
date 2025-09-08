@@ -1,25 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel = "stylesheet" href="Css.css">
-    <style>
-        
-        .main {
-             color : red;
-            text-align : center;
-        }
-        h1#sub {
-            color : cyan;
-            text-align : center;
-        }
-    </style>
+
+  <title>CSS Basics and Style Types</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+
+    .internal-style {
+      color: darkblue;
+      font-size: 20px;
+      border: 2px dashed blue;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #f0f8ff;
+    }
+
+    .scroll-box {
+      border: 1px solid #ccc;
+      max-height: 150px;
+      overflow-y: auto;
+      padding: 10px;
+      background-color: #fafafa;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+    .external-style {
+  color: darkred;
+  font-size: 18px;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border: 2px solid red;
+  margin-top: 10px;
+}
+
+  </style>
 </head>
 <body>
-   <h1>
-    
-   </h1>
+
+  <h1>CSS Basics and Stylesheet Types</h1>
+
+  <section>
+    <h2>🔧 What is CSS?</h2>
+    <p>
+      CSS (Cascading Style Sheets) is used to control the style and layout of HTML elements. 
+      It allows you to change colors, fonts, spacing, and positioning.
+    </p>
+  </section>
+
+  <section>
+    <h2>🎯 Basic CSS Properties</h2>
+    <div class="scroll-box">
+      <ul>
+        <li><code>color</code>: Sets the text color.</li>
+        <li><code>font-size</code>: Sets the size of the font.</li>
+        <li><code>font-family</code>: Sets the font style (e.g., Arial, Times New Roman).</li>
+        <li><code>background-color</code>: Sets the background color of an element.</li>
+        <li><code>margin</code>: Controls the space outside the element.</li>
+        <li><code>padding</code>: Controls the space inside the element.</li>
+        <li><code>border</code>: Adds a border around the element.</li>
+        <li><code>width</code>: Sets the width of the element.</li>
+        <li><code>height</code>: Sets the height of the element.</li>
+        <li><code>text-align</code>: Aligns the text (left, center, right).</li>
+        <li><code>display</code>: Sets how elements are displayed (block, inline, flex, etc.).</li>
+        <li><code>position</code>: Sets positioning (static, relative, absolute, fixed).</li>
+        <li><code>overflow</code>: Controls overflow behavior (hidden, scroll, auto).</li>
+        <li><code>z-index</code>: Controls stack order of elements.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>🧪 CSS Stylesheet Types</h2>
+
+    <h3>1. Inline CSS</h3>
+    <p style="color: green; font-weight: bold; border: 1px solid green; padding: 8px;">
+      This paragraph uses <strong>inline CSS</strong>. Styles are applied directly in the HTML tag using the <code>style</code> attribute.
+    </p>
+
+    <h3>2. Internal CSS</h3>
+    <p class="internal-style">
+      This paragraph uses <strong>internal CSS</strong>. Styles are defined in the <code>&lt;style&gt;</code> tag inside the HTML document's head.
+    </p>
+
+    <h3>3. External CSS</h3>
+    <p class="external-style">
+      This paragraph uses <strong>external CSS</strong>. Styles are defined in a separate file (<code>styles.css</code>) and linked with <code>&lt;link&gt;</code>.
+    </p>
+  </section>
+
 </body>
 </html>
