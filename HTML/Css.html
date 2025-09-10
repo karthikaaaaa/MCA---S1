@@ -7,27 +7,10 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-
-    .internal-style {
-      color: darkblue;
-      font-size: 20px;
-      border: 2px dashed blue;
-      padding: 10px;
-      margin: 10px 0;
-      background-color: #f0f8ff;
-    }
-
-    .scroll-box {
-      border: 1px solid #ccc;
-      max-height: 150px;
-      overflow-y: auto;
-      padding: 10px;
-      background-color: #fafafa;
-    }
-
     body {
       font-family: Arial, sans-serif;
       margin: 30px;
+      background-color: #fdfdfd;
     }
 
     h1 {
@@ -39,31 +22,199 @@
       padding: 2px 5px;
       border-radius: 4px;
     }
+
+    .internal-style {
+      color: darkblue;
+      font-size: 20px;
+      border: 2px dashed blue;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #f0f8ff;
+    }
+
     .external-style {
-  color: darkred;
-  font-size: 18px;
-  background-color: #ffe6e6;
-  padding: 10px;
-  border: 2px solid red;
-  margin-top: 10px;
+      color: darkred;
+      font-size: 18px;
+      background-color: #ffe6e6;
+      padding: 10px;
+      border: 2px solid red;
+      margin-top: 10px;
+    }
+
+    .css-info-section {
+  background-color: #f2f2f2; /* Light grey */
+  padding: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
+.css-text {
+  flex: 1;
+  max-width: 60%;
+}
+
+.css-text h2 {
+  font-size: 36px;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.css-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.css-image {
+  flex: 1;
+  text-align: right;
+}
+
+.css-image img {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+.css-image img:hover {
+      transform: scale(1.10);
+}
+
+
+    .three-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .img-card {
+      flex: 1;
+      min-width: 250px;
+      background-color: #f2f2f2;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .img-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .img-card img:hover {
+      transform: scale(1.10);
+    }
+
+
+    .link {
+      background-color: #d4eafd;  /* same as css-info-section */
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .link a {
+      color: #007bff;
+    }
+
+    .link a:visited {
+      color: red;
+    }
+
+    .scroll-image-section {
+      background-color: #f2f2f2; /* Light grey */
+      padding: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .scroll-box {
+      flex: 1;
+      max-width: 50%;
+      max-height: 250px; /* set fixed height */
+      overflow-y: auto;
+      background-color: #fafafa; /* lighter inside box */
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .scroll-image {
+      flex: 1;
+      max-width: 45%;
+      text-align: right;
+    }
+
+    .scroll-image img {
+      max-width: 100%;
+      width: 400px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .scroll-image img:hover {
+      transform: scale(1.10);
+    }
+
+
   </style>
+
 </head>
 <body>
 
   <h1>CSS Basics and Stylesheet Types</h1>
 
-  <section>
-    <h2>🔧 What is CSS?</h2>
+  <section class="css-info-section">
+  <div class="css-text">
+    <h2>CSS</h2>
     <p>
-      CSS (Cascading Style Sheets) is used to control the style and layout of HTML elements. 
-      It allows you to change colors, fonts, spacing, and positioning.
+      CSS, which stands for Cascading Style Sheets, is used to style and design web pages. It helps control how elements on a page look, including colors, fonts, spacing, layout, and more. With CSS, you can make your website visually appealing and easy to use. It works alongside HTML, which provides the structure, while CSS focuses on the presentation. Using CSS, you can create responsive designs that work well on different screen sizes and devices.
     </p>
+  </div>
+  <div class="css-image">
+    <img src="./Assests/css1.png" alt="CSS Illustration">
+  </div>
+</section>
+
+<!-- Three Image Cards -->
+  <section>
+    <h2>🧪 CSS Use Cases</h2>
+    <div class="three-images">
+      <div class="img-card">
+        <img src="./Assests/css3.png" alt="Use Case Image">
+        <p><strong>Use Case:</strong> CSS is used to design web pages, layout content, and create visually engaging websites.</p>
+      </div>
+
+      <div class="img-card">
+        <img src="./Assests/css4.png" alt="Animation Image">
+        <p><strong>Animation:</strong> CSS animations help bring elements to life with transitions, transforms, and keyframes.</p>
+      </div>
+
+      <div class="img-card">
+        <img src="./Assests/css5.png" alt="Themes Image">
+        <p><strong>Themes:</strong> CSS enables light and dark themes, responsive design, and styling flexibility for all devices.</p>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>🎯 Basic CSS Properties</h2>
+
+  <h2>🎯 Basic CSS Properties</h2>
+  <section class="scroll-image-section">
     <div class="scroll-box">
       <ul>
         <li><code>color</code>: Sets the text color.</li>
@@ -82,6 +233,9 @@
         <li><code>z-index</code>: Controls stack order of elements.</li>
       </ul>
     </div>
+    <div class="scroll-image">
+    <img src="./Assests/css2.png" alt="CSS Illustration">
+  </div>
   </section>
 
   <section>
@@ -102,6 +256,14 @@
       This paragraph uses <strong>external CSS</strong>. Styles are defined in a separate file (<code>styles.css</code>) and linked with <code>&lt;link&gt;</code>.
     </p>
   </section>
+  <br>
+
+  <section>
+    <div class="link">
+    <a href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer">
+      Know more about css</a>
+    </div>
+  </section> 
 
 </body>
 </html>
