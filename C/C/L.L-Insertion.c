@@ -43,7 +43,7 @@ void InsertionAtPosition(int value,int pos)
     newnode->next=NULL;
 
     if(pos<1)
-    {
+    {   
         printf("Invalid position");
         free(newnode);
         return;    

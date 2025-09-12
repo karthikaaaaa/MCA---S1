@@ -1,101 +1,59 @@
 #include <stdio.h>
-#include <stdlib.h>
-
-#define MAX 100  // Maximum size of the queue
-
-// Queue structure
-struct Queue {
-    int items[MAX];
-    int front;
-    int rear;
-};
-
-// Initialize queue
-void initialize(struct Queue* q) {
-    q->front = -1;
-    q->rear = -1;
-}
-
-// Check if queue is full
-int isFull(struct Queue* q) {
-    return q->rear == MAX - 1;
-}
-
-// Check if queue is empty
-int isEmpty(struct Queue* q) {
-    return q->front == -1 || q->front > q->rear;
-}
-
-// Enqueue operation
-void enqueue(struct Queue* q, int value) {
-    if (isFull(q)) {
-        printf("Queue overflow! Cannot enqueue %d\n", value);
-        return;
+#define MAX 100
+int queue[MAX];
+int rear = -1, front = -1;
+void display();
+int enqueue(int value){
+    if(rear == MAX - 1) {
+        printf("Queue Overflow");
+        return 1;
     }
-
-    if (isEmpty(q)) {
-        q->front = 0;
+    if(front == -1){
+        front++;
     }
-
-    q->rear++;
-    q->items[q->rear] = value;
-    printf("%d enqueued to queue.\n", value);
+    rear++;
+    queue[rear] = value;
+    display();
 }
-
-// Dequeue operation
-int dequeue(struct Queue* q) {
-    if (isEmpty(q)) {
-        printf("Queue underflow! Cannot dequeue.\n");
-        return -1;
+int dequeue(){
+    if(rear == -1 || front > rear){
+        printf("Queue is empty");
     }
+    printf("%d is deleted\n",queue[front]);
+    front++;
+    display();
 
-    int removed = q->items[q->front];
-    q->front++;
-
-    return removed;
 }
-
-// Peek operation
-int peek(struct Queue* q) {
-    if (isEmpty(q)) {
-        printf("Queue is empty.\n");
-        return -1;
+void display(){
+    printf("Elements are : ");
+    for(int i = front; i <= rear ; i++ ){
+        printf("%d\t",queue[i]);
     }
-
-    return q->items[q->front];
 }
+int main(){
 
-// Display queue
-void display(struct Queue* q) {
-    if (isEmpty(q)) {
-        printf("Queue is empty.\n");
-        return;
+        int option;
+        int num;
+        while(1){
+        printf("\n\nEnter the choice \n1.Enqueue\n2.Dequeue\n3.Display\n");
+        scanf("%d",&option);
+        switch(option){
+            case 1 :
+            printf("Enter the element to enqueue\n");
+            scanf("%d",&num);
+            enqueue(num);
+            break;
+            case 2 :
+            dequeue();
+            break;
+            case 3:
+            display();
+            break;
+            default:
+            printf("Enter a valid option\n");
+            break;
+        }
     }
-
-    printf("Queue elements:\n");
-    for (int i = q->front; i <= q->rear; i++) {
-        printf("%d ", q->items[i]);
-    }
-    printf("\n");
-}
-
-// Main function
-int main() {
-    struct Queue queue;
-    initialize(&queue);
-
-    enqueue(&queue, 10);
-    enqueue(&queue, 20);
-    enqueue(&queue, 30);
-
-    display(&queue);
-
-    printf("Front element is: %d\n", peek(&queue));
-
-    printf("Dequeued element: %d\n", dequeue(&queue));
-    printf("Dequeued element: %d\n", dequeue(&queue));
-
-    display(&queue);
-
-    return 0;
+   
+ return 0;
 }
