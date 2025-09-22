@@ -16,8 +16,10 @@
       if (!y) return alert("Enter a valid year");
       const mNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                       "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
       let out = "";
       for (let m = 0; m < 12; m++) {
+        
         out += `\n📅 ${mNames[m]} ${y}\nSun Mon Tue Wed Thu Fri Sat\n`;
         let first = new Date(y, m, 1).getDay();
         let days = new Date(y, m + 1, 0).getDate();
