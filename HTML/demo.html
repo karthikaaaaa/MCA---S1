@@ -1,0 +1,208 @@
+<!-- // let x = 5;
+// let y = 6;
+// let sum = x + y;
+// let content = document.getElementById("heading");
+// let button_1 = document.getElementById("btn-1");
+// let para = document.getElementById("para")
+// function changeName(){
+//     alert("Nanni Unde");
+//     content.innerHTML = "Abhijith Ser CET yute aishwaryam";
+//     para.innerHTML = sum;
+//     button_1.hidden = true;
+
+// }
+// console.log(content); -->
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="padding: 10px;">
+  <h2>String Handling Functions</h2>
+  <label for="inputStr">Enter a String:</label>
+  <input type="text" id="inputStr" placeholder="Type something..."/>
+  <br><br>
+
+  <button onclick="toUpperCase()">To Upper Case</button>
+  <button onclick="toLowerCase()">To Lower Case</button>
+  <button onclick="findLength()">Find Length</button>
+  <button onclick="reverseString()">Reverse</button>
+  <button onclick="checkSubstring()">Check for 'js'</button>
+  <button onclick="replaceString()">Replace 'js' with 'JavaScript'</button>
+  <button onclick="sliceString()">Slice (0,5)</button>
+  <button onclick="findIndex()">indexOf('js')</button>
+  <button onclick="findLastIndex()">lastIndexOf('js')</button>
+  <button onclick="searchString()">search('js')</button>
+  <button onclick="substringString()">substring(2,7)</button>
+  <button onclick="substrString()">substr(2,5)</button>
+
+  <h3 id="strOutput"></h3>
+
+    <br><br><br>
+
+  <h2>Math Functions</h2>
+  <label for="mathInput">Enter a number:</label>
+  <input type="number" id="mathInput" placeholder="Type number..."/>
+  <br><br>
+
+  <button onclick="doRound()">Math.round()</button>
+    <button onclick="doCeil()">Math.ceil()</button>
+    <button onclick="doFloor()">Math.floor()</button>
+    <button onclick="doTrunc()">Math.trunc()</button>
+    <button onclick="doSign()">Math.sign()</button>
+    <button onclick="doPow()">Math.pow(n, 2)</button>
+    <button onclick="doSqrt()">Math.sqrt()</button>
+    <button onclick="doAbs()">Math.abs()</button>
+    <button onclick="doSin()">Math.sin()</button>
+    <button onclick="doCos()">Math.cos()</button>
+    <button onclick="doMin()">Math.min(5, 3, 9, 1)</button>
+    <button onclick="doMax()">Math.max(5, 3, 9, 1)</button>
+    <button onclick="doRandom()">Math.random()</button>
+
+    <h3 id="mathOutput"></h3>
+
+</body>
+<script>
+    function getInputStr() {
+      return document.getElementById("inputStr").value;
+    }
+
+    function toUpperCase() {
+      let str = getInputStr();
+      document.getElementById("strOutput").innerHTML = "Upper Case: " + str.toUpperCase();
+    }
+
+    function toLowerCase() {
+      let str = getInputStr();
+      document.getElementById("strOutput").innerHTML = "Lower Case: " + str.toLowerCase();
+    }
+
+    function findLength() {
+      let str = getInputStr();
+      document.getElementById("strOutput").innerHTML = "Length: " + str.length;
+    }
+
+    function reverseString() {
+      let str = getInputStr();
+      let reversed = str.split("").reverse().join("");
+      document.getElementById("strOutput").innerHTML = "Reversed: " + reversed;
+    }
+
+    function checkSubstring() {
+      let str = getInputStr();
+      let hasJS = str.toLowerCase().includes("js");
+      document.getElementById("strOutput").innerHTML = hasJS ? "'js' found." : "'js' not found.";
+    }
+
+    function replaceString() {
+      let str = getInputStr();
+      let replaced = str.replace(/js/gi, "JavaScript");
+      document.getElementById("strOutput").innerHTML = "After Replace: " + replaced;
+    }
+
+    function sliceString() {
+      let str = getInputStr();
+      document.getElementById("strOutput").innerHTML = "Slice(0,5): " + str.slice(0, 5);
+    }
+
+    function findIndex() {
+      let str = getInputStr();
+      let index = str.indexOf("js");
+      document.getElementById("strOutput").innerHTML = "indexOf('js'): " + index;
+    }
+
+    function findLastIndex() {
+      let str = getInputStr();
+      let index = str.lastIndexOf("js");
+      document.getElementById("strOutput").innerHTML = "lastIndexOf('js'): " + index;
+    }
+
+    function searchString() {
+      let str = getInputStr();
+      let pos = str.search(/js/i);
+      document.getElementById("strOutput").innerHTML = "search('js'): " + pos;
+    }
+
+    function substringString() {
+      let str = getInputStr();
+      document.getElementById("strOutput").innerHTML = "substring(2,7): " + str.substring(2, 7);
+    }
+
+    function substrString() {
+      let str = getInputStr();
+      document.getElementById("strOutput").innerHTML = "substr(2,5): " + str.substr(2, 5);
+    }
+
+
+    function getMathInput() {
+  return parseFloat(document.getElementById("mathInput").value);
+}
+
+function doRound() {
+  let num = getMathInput();
+  document.getElementById("mathOutput").innerText = "Round: " + Math.round(num);
+}
+
+function doCeil() {
+  let num = getMathInput();
+  document.getElementById("mathOutput").innerText = "Ceil: " + Math.ceil(num);
+}
+
+function doFloor() {
+  let num = getMathInput();
+  document.getElementById("mathOutput").innerText = "Floor: " + Math.floor(num);
+}
+
+function doTrunc() {
+  let num = getMathInput();
+  document.getElementById("mathOutput").innerText = "Trunc: " + Math.trunc(num);
+}
+
+function doSign() {
+  let num = getMathInput();
+  document.getElementById("mathOutput").innerText = "Sign: " + Math.sign(num);
+}
+
+function doPow() {
+  let num = getMathInput();
+  document.getElementById("mathOutput").innerText = `Pow(${num}, 2): ` + Math.pow(num, 2);
+}
+
+function doSqrt() {
+  let num = getMathInput();
+  document.getElementById("mathOutput").innerText = "Square Root: " + Math.sqrt(num);
+}
+
+function doAbs() {
+  let num = getMathInput();
+  document.getElementById("mathOutput").innerText = "Absolute: " + Math.abs(num);
+}
+
+function doSin() {
+  let num = getMathInput();
+  document.getElementById("mathOutput").innerText = "Sin (in radians): " + Math.sin(num);
+}
+
+function doCos() {
+  let num = getMathInput();
+  document.getElementById("mathOutput").innerText = "Cos (in radians): " + Math.cos(num);
+}
+
+function doMin() {
+  document.getElementById("mathOutput").innerText = "Min of (5, 3, 9, 1): " + Math.min(5, 3, 9, 1);
+}
+
+function doMax() {
+  document.getElementById("mathOutput").innerText = "Max of (5, 3, 9, 1): " + Math.max(5, 3, 9, 1);
+}
+
+function doRandom() {
+  document.getElementById("mathOutput").innerText = "Random (1 to 10): " + Math.floor(Math.random()*11);
+}
+
+</script>
+</html>
