@@ -20,6 +20,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #2c3e50;
+    padding: 20px;
+  }
+
+  h2 {
+    color: #34495e;
+    margin-bottom: 10px;
+  }
+
+  label {
+    font-weight: 500;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    padding: 8px 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    width: 220px;
+    margin: 5px 0 15px 0;
+    outline: none;
+  }
+
+  input:focus {
+    border-color: #5dade2;
+    box-shadow: 0 0 5px rgba(93, 173, 226, 0.4);
+  }
+
+  button {
+    background-color: #5dade2;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    margin: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+
+  button:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(52, 152, 219, 0.3);
+  }
+
+  h3 {
+    background-color: #eaf2f8;
+    padding: 10px;
+    border-radius: 6px;
+    min-height: 25px;
+    margin-top: 10px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    color: #2c3e50;
+  }
+
+  .section {
+    margin-bottom: 35px;
+  }
+</style>
+
 </head>
 <body style="padding: 10px;">
   <h2>String Handling Functions</h2>
@@ -69,7 +136,7 @@
 <script>
     function getInputStr() {
       return document.getElementById("inputStr").value;
-    }
+    }.8
 
     function toUpperCase() {
       let str = getInputStr();
@@ -201,7 +268,7 @@ function doMax() {
 }
 
 function doRandom() {
-  document.getElementById("mathOutput").innerText = "Random (1 to 10): " + Math.floor(Math.random()*11);
+  document.getElementById("mathOutput").innerText = "Random (1 to 10): " + Math.floor(Math.random() * 11);
 }
 
 </script>
