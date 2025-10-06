@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <img id="image" src="./Assests/Types of Web Content.png" alt="Image" width="600" height="500">
+        <p id="text">This is the original text</p>
+    </div>
+
+    <script>
+        // Get references to elements
+        const image = document.getElementById("image");
+        const text = document.getElementById("text");
+        image.addEventListener("mouseover", function() {
+            image.src = "./Assests/Web Technology.png.jpg"; // new image
+            text.textContent = "This is the new text after hover";
+        });
+        image.addEventListener("mouseout", function() {
+            image.src = "./Assests/Types of Web Content.png"; // original image
+            text.textContent = "This is the original text";
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+    const cars=["BMW","Volvo","Saab","Ford"]
+
+    // document.getElementById("demo").innerHTML = cars[0];
+    document.getElementById("demo").innerHTML = cars.length;
+    
+    </script>
+</body>
+</html>
+ -->
+
+
+<!-- //to display array elements in a list format
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        const cars=new Array("BMW","Volvo","Saab","Ford");
+        var str = "<ul>"
+            for (var i=0;i<cars.length;i++)
+            {
+                str += "<li>" + cars[i] + "</li>"
+            }
+        str += "</ul>"
+        document.getElementById("demo").innerHTML = str;
+
+</body>
+</html> -->

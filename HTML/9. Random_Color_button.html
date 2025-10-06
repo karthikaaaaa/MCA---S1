@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="button">Click Me!</button>
+    <script>
+        document.getElementById("button").addEventListener("click", buttonClicked);
+        function buttonClicked() {
+            var rcol = "";
+            for (var i = 0; i < 6; i++) {
+                rcol += Math.floor(Math.random() * 10);
+            }
+            document.body.style.background = "#" + rcol;
+        }
+    </script>
+</body>
+</html>
