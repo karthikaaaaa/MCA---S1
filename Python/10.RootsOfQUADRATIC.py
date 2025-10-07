@@ -14,4 +14,4 @@ d = cmath.sqrt(b**2 - 4*a*c)  # cmath.sqrt works even if negative
 root1 = (-b + d) / (2*a)
 root2 = (-b - d) / (2*a)
 
-print(f"Roots of the quadratic equation: {root1}, {root2}")
+print(f"Roots of the quadratic equation: {root1:.2f}, {root2:.2f}")
