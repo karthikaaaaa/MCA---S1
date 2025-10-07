@@ -1,4 +1,4 @@
-#prgm to find the area and perimeter from an enteres radius
+#prgm to find the area and perimeter from an entered radius
 
 import math
 
